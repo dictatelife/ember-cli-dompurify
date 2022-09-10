@@ -4,7 +4,7 @@ module.exports = {
   root: true,
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2022,
     sourceType: 'module',
     ecmaFeatures: {
       legacyDecorators: true,
@@ -14,18 +14,20 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
-    'plugin:prettier/recommended',
+    'prettier'
   ],
   env: {
     browser: true,
   },
-  rules: {},
+  rules: {
+    "no-undef": false
+  },
   overrides: [
     // node files
     {
       files: [
         './.eslintrc.js',
-        './.prettierrc.js',
+        './.prettierrc',
         './.template-lintrc.js',
         './ember-cli-build.js',
         './index.js',
