@@ -6,6 +6,9 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'history',
+    domPurify: {
+      FORBID_TAGS: ['span']
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

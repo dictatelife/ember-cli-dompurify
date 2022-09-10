@@ -28,6 +28,8 @@
     "postpack": "ember ts:clean"
   },
   "dependencies": {
+    "dompurify": "^2.4.0",
+    "ember-auto-import": "^2.4.2",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-htmlbars": "^6.1.0",
     "ember-cli-typescript": "^5.1.1"
@@ -39,7 +41,10 @@
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
     "@tsconfig/ember": "^1.0.1",
+    "@types/dompurify": "^2.3.4",
     "@types/ember": "^4.0.1",
+    "@types/ember-qunit": "^5.0.1",
+    "@types/ember-resolver": "^5.0.11",
     "@types/ember__application": "^4.0.1",
     "@types/ember__array": "^4.0.2",
     "@types/ember__component": "^4.0.10",
@@ -57,13 +62,10 @@
     "@types/ember__test": "^4.0.0",
     "@types/ember__test-helpers": "^2.8.1",
     "@types/ember__utils": "^4.0.1",
-    "@types/ember-qunit": "^5.0.1",
-    "@types/ember-resolver": "^5.0.11",
     "@types/qunit": "^2.19.2",
     "@types/rsvp": "^4.0.4",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
-    "ember-auto-import": "^2.4.2",
     "ember-cli": "~4.6.0",
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-inject-live-reload": "^2.1.0",
