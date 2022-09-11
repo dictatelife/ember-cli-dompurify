@@ -1,6 +1,6 @@
 import EmberRouter from '@ember/routing/router';
 import config from 'dummy/config/environment';
-import { service } from '@ember/service';
+import { inject as service } from '@ember/service';
 
 export default class Router extends EmberRouter {
   @service domPurify;
