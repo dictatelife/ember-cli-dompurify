@@ -4,6 +4,7 @@ import { Config } from "dompurify"
 import { assert } from "@ember/debug"
 import { getOwner } from "@ember/application"
 import ApplicationInstance from "@ember/application/instance"
+import { htmlSafe } from '@ember/template';
 
 export default class DomPurify extends Helper {
   get appConfig(): Config {
@@ -14,7 +15,8 @@ export default class DomPurify extends Helper {
   }
 
   compute(positional: unknown[]) {
-    const text = positional[0]
+    const text = positional[0];
+    let sanitized;
 
     assert(
       "the dom-purify helper accepts one positional argument of type string.",
@@ -22,9 +24,11 @@ export default class DomPurify extends Helper {
     )
 
     if (this.appConfig) {
-      return dompurify.sanitize(text, this.appConfig)
+      sanitized = dompurify.sanitize(text, this.appConfig)
     } else {
-      return dompurify.sanitize(text)
+      sanitized = dompurify.sanitize(text)
     }
+
+    return htmlSafe(sanitized as string);
   }
 }
