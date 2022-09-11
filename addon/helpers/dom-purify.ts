@@ -1,12 +1,12 @@
 import Helper from "@ember/component/helper"
-import * as dompurify from "dompurify"
+import dompurify from "dompurify"
 import { Config } from "dompurify"
 import { assert } from "@ember/debug"
 import { getOwner } from "@ember/application"
 import ApplicationInstance from "@ember/application/instance"
 
 export default class DomPurify extends Helper {
-  get config(): Config {
+  get appConfig(): Config {
     const reg = (getOwner(this) as ApplicationInstance).resolveRegistration(
       "config:environment"
     ) as Record<string, any>
@@ -21,8 +21,8 @@ export default class DomPurify extends Helper {
       typeof text == "string"
     )
 
-    if (this.config) {
-      return dompurify.sanitize(text, this.config)
+    if (this.appConfig) {
+      return dompurify.sanitize(text, this.appConfig)
     } else {
       return dompurify.sanitize(text)
     }
