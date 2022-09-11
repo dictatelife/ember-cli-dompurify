@@ -27,7 +27,7 @@ module.exports = {
     {
       files: [
         './.eslintrc.js',
-        './.prettierrc',
+        './.prettierrc.json',
         './.template-lintrc.js',
         './ember-cli-build.js',
         './index.js',
@@ -48,7 +48,7 @@ module.exports = {
     },
     {
       // test files
-      files: ['tests/**/*-test.{js,ts}'],
+      files: ['tests/**/*-test.{js}'],
       extends: ['plugin:qunit/recommended'],
     },
   ],
