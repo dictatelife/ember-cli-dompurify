@@ -20,7 +20,7 @@ module.exports = {
     browser: true,
   },
   rules: {
-    "no-undef": false
+    "no-undef": 0
   },
   overrides: [
     // node files
