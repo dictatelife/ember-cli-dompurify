@@ -15,13 +15,12 @@ export default class DomPurify extends Helper {
   }
 
   compute(positional: unknown[]) {
-    const text = positional[0];
+    let text = positional[0];
     let sanitized;
 
-    assert(
-      "the dom-purify helper accepts one positional argument of type string.",
-      typeof text == "string"
-    )
+    if (typeof text != "string") {
+      return text;
+    }
 
     if (this.appConfig) {
       sanitized = dompurify.sanitize(text, this.appConfig)
