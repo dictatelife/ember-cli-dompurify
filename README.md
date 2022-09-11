@@ -1,7 +1,10 @@
 # ember-cli-dompurify
 
-[Short description of the addon.]
+Allows usage of DOMPurify in your Ember application
 
+## Todo
+
+- add documentation describing how to create your own helper or other implementation with custom options
 
 ## Compatibility
 
