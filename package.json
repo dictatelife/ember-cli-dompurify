@@ -1,12 +1,13 @@
 {
   "name": "ember-cli-dompurify",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "Use DOMPurify in your Ember.js application",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "github:dictatelife/ember-cli-dompurify",
   "license": "MIT",
+  "homepage": "https://github.com/dictatelife/ember-cli-dompurify#readme",
   "author": "",
   "directories": {
     "doc": "doc",
