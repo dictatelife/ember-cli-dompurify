@@ -1,4 +1,4 @@
-ember-cli-dompurify
+ember-cli-dompurify (No longer maintained)
 ====================================================================================
 
 [![NPM Version][npm-badge]][npm-badge-url]
